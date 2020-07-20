@@ -9,7 +9,7 @@ function logMessage(message) {
 
 function logInfo(message){
     console.info(message);
-    return Nan;
+    return null;
 }
 
 function logError(message){
@@ -25,8 +25,16 @@ if(isOk()){
     };
 }
 
+/* Saída */
+// My log
+// My info
+
 // Faça:
 isOk() && logMessage("My log") && logInfo("My info") && logError("My Error");
+
+/* Saída */
+// My log
+// My info
 
 /*********** Explicação */
 /*
