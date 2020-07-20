@@ -4,20 +4,18 @@ const myObject = {
     }
 };
 
-// Opção 1:
-if( myObject && myObject.hasOwnProperty("tech") && myObject.tech.hasOwnProperty("name")){
-    console.log(myObject.tech.name); // JavaScript
-}
+const myArray = [1, 2, 3, 4];
 
-// Opção 2
-if( myObject && typeof myObject === "object" && "tech" in myObject && "name" in myObject.tech){
-    console.log(myObject.tech.name); // JavaScript
-}
+const { tech } = myObject;
+console.log(tech); // { name: 'JavaScript' }
 
-// Opção 3
-console.log(myObject?.tech?.name); // JavaScript 
+const [ , value1, , value3 ] = myArray; // Ignorando os valores da posição 0 e 2
+const [ value, ,value2] = myArray; // Ignorando os valores da posição 1 e 3
+
+console.log(value1, value3); // 2 4
+console.log(value, value2); // 1 3
 
 /*********** Explicação */
 /*
-    Detectando propriedades em objeto 
+    Desestruturação
 */
