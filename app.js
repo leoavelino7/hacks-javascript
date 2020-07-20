@@ -1,6 +1,10 @@
-const myText = (false, NaN, null, 0, "") || "defaultValue";
+const names = ["Leonardo", "Ana", "João", "William", "Joyce", "Gabriel", "Paula"];
 
-console.log(myText); // defaultValue
+function shuffle(list){
+    return list.sort(() => Math.random() - 0.5);
+}
+
+console.log(shuffle(names));
 
 /*********** Explicação */
 /*
