@@ -1,26 +1,9 @@
 const list = [
-    {name: "Leonardo", age: 16}, 
-    {name: "Ana Paula", age: 25}, 
-    {name: "João", age: 15}, 
-    {name: "William", age: 26}, 
-    {name: "Joyce", age: 35}, 
-    {name: "Gabriel", age: 25}, 
-    {name: "Paula", age: 45}, 
-    {name: "Ana Julia", age: 10}
+    {fruit: "Maça", price: 1.50}, 
+    {fruit: "Laranja", price: 1.35}, 
+    {fruit: "Melão", price: 1.80}, 
 ];
 
-// Ordenando lista por ordem alfabética
-const newList = list.sort((a, b) => a.name > b.name ? 1 : -1);
-console.log(newList);
-/*
-    [
-    { name: 'Ana Julia', age: 10 },
-    { name: 'Ana Paula', age: 25 },
-    { name: 'Gabriel', age: 25 },
-    { name: 'Joyce', age: 35 },
-    { name: 'João', age: 15 },
-    { name: 'Leonardo', age: 16 },
-    { name: 'Paula', age: 45 },
-    { name: 'William', age: 26 }
-    ]
-*/
+// Somando as idades
+const total = list.reduce((accumulator, currentElement) => accumulator += currentElement.price, 0);
+console.log(total); // 4.65
