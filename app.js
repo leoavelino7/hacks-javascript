@@ -5,6 +5,6 @@ const list = [
     "Melão"
 ];
 
-// Retorna True caso ao menos um dos elementos no array terminar com a letra 'a'
-const exist = list.some(fruit => fruit.endsWith("a"));
-console.log(exist); // true
+// Retorna True caso todos os elementos no array terminarem com a letra 'a'
+const exist = list.every(fruit => fruit.endsWith("a"));
+console.log(exist); // false
