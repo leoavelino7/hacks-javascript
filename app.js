@@ -1,9 +1,10 @@
 const list = [
-    {fruit: "Maça", price: 1.50}, 
-    {fruit: "Laranja", price: 1.35}, 
-    {fruit: "Melão", price: 1.80}
+    "Abacaxi",
+    "Maça",
+    "Laranja",
+    "Melão"
 ];
 
-// Somando os preços
-const total = list.reduce((accumulator, currentElement) => accumulator += currentElement.price, 0);
-console.log(total); // 4.65
+// Retorna True caso ao menos um dos elementos no array terminar com a letra 'a'
+const exist = list.some(fruit => fruit.endsWith("a"));
+console.log(exist); // true
