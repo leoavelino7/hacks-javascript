@@ -1,5 +1,16 @@
-const value = 6432.50;
+const values = [
+    55,
+    100,
+    58,
+    95,
+    78,
+    145,
+    789,
+    250
+];
 
-const real = value.toLocaleString("pt-br",{style: "currency", currency: "BRL", minimumFractionDigits: 2});
+const maxValue = Math.max(...values);
+console.log(maxValue); // 789
 
-console.log(real); // R$ 6.432,50
+const minValue = Math.min(...values);
+console.log(minValue); // 55
