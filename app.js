@@ -1,10 +1,5 @@
-const list = [
-    "Abacaxi",
-    "Maça",
-    "Laranja",
-    "Melão"
-];
+const value = 6432.50;
 
-// Retorna True caso todos os elementos no array terminarem com a letra 'a'
-const exist = list.every(fruit => fruit.endsWith("a"));
-console.log(exist); // false
+const real = value.toLocaleString("pt-br",{style: "currency", currency: "BRL", minimumFractionDigits: 2});
+
+console.log(real); // R$ 6.432,50
